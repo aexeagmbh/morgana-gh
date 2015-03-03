@@ -1,0 +1,428 @@
+.specialelite {
+    font-family: 'Special Elite', 'Times New Roman', sans-serif;
+}
+
+// Info panels
+.panel-warning {
+  @include panel($bg: $panel-warning-background-color);
+}
+.panel-success {
+  @include panel($bg: $panel-success-background-color);
+}
+.panel-alert {
+  @include panel($bg: $panel-alert-background-color);
+}
+.panel-info {
+  @include panel($bg: $panel-info-background-color);
+}
+
+// Essentials
+body {
+    counter-reset: section;
+
+    a:hover {
+        text-decoration: underline;
+    }
+    a.button:hover {
+        text-decoration: none;
+    }
+    main {
+      margin-top: $main-margin-top;
+    }
+    main.full-width {
+      .row {
+        max-width: 100%;
+      }
+    }
+    header {
+	  min-height: 72px;
+
+	h2 {
+		padding: 1.875rem 0;
+	}
+}
+
+	section header {
+	  min-height: inherit;
+	}
+}
+
+select[multiple] {
+  height: auto;
+}
+
+input[type="range"] {
+    display: inline-block;
+    width: 100%;
+}
+
+// Essential Form Styles
+
+form {
+  .column > fieldset:first-child,
+  .columns > fieldset:first-child {
+      margin-top: 0;
+  }
+
+  label.required:after { content: '*'; }
+}
+
+
+// SASS Customizing
+.button {
+    color:#fff !important;
+}
+.button.tiny {
+    padding-top: 0.225rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.2875rem;
+    padding-left: 1.2rem;
+}
+.button.small {
+    padding-top: 0.575rem;
+    padding-right: 1.9rem;
+    padding-bottom: 0.4375rem;
+    padding-left: 1.9rem;
+}
+.button.mega {
+    padding-top: 1rem;
+    padding-right: 2.25rem;
+    padding-bottom: 1.1875rem;
+    padding-left: 2.25rem;
+    text-transform: uppercase;
+}
+
+// align buttons with fieldsets
+.button-holder {
+    margin: $subheader-top-margin 2px;
+}
+
+// prevent buttons from making table rows too large
+.dataTable .button {
+    margin: 0;
+}
+
+table td.row-link {
+    cursor: pointer;
+}
+
+table.hover tr:hover {
+    background-color: #eee;
+}
+
+.text-uppercase {text-transform: uppercase;}
+
+// Headlines
+h1, h2, h3, h4, h5 {
+    color: $ci2;
+    text-transform: uppercase;
+}
+
+
+h2 {
+	span.subheader {
+		display: block;
+		color: $ci2;
+		text-transform: none;
+		font-size: $h4-font-size;
+		margin-top: 3rem;
+	}
+}
+
+#logo {
+    margin:1px;
+}
+
+
+// FIXME: REMOVE THIS!
+
+// Coloring
+.gradient-lightgrey {
+    background: #f5f5f5;
+}
+.gradient-lightgrey-reverse {
+    background: #f5f5f5;
+}
+.gradient-yellow {
+    background: #006e2f;
+}
+
+.greenborder {
+    display: block;
+    border-bottom: 2px solid $ci1;
+}
+.greenborder.vertical {
+    border-right: 2px solid $ci1;
+    border-bottom: none;
+}
+
+.txtgreen {color: $ci1;}
+.txtdarkgreen {color: $ci6;}
+.txtlightgrey {color:$ci3;}
+
+.green {background: $ci1}
+.darkgreen {background: $ci6}
+.lightgrey {background:$ci3}
+.yellow {background: #006E2F}
+
+.button.green {background: $ci1;}
+.button.darkgreen {background: $ci6;}
+.button.lightgrey {background:$ci3;}
+.button.yellow {
+    @extend .gradient-yellow;
+}
+.button.green:hover, .button.green:focus {
+    background: mix($ci1, #000, 80%);
+}
+.button.darkgreen:hover, .button.darkgreen:focus {
+    background: mix($ci6, #000, 80%);
+}
+.button.lightgrey:hover,.button.lightgrey:focus {
+    background: mix($ci3, #000, 80%);
+}
+.button.yellow:hover, .button.yellow:focus {
+    background: mix(#006E2F, #fff, 70%);
+}
+// FIXME: END REMOVE THIS
+
+/* Rounded Stuff */
+.roundFull {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #fff;
+}
+
+
+.navigationRow-true-outer-height-margin {
+  margin-top: $navigationRow-true-outer-height;
+}
+.navigationRow-outer-height-margin {
+  margin-top: $navigationRow-outer-height;
+}
+
+
+// Special Items
+.container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+// Accordion
+.accordion {
+    dd > a {
+        background: transparent;
+        padding:1rem;
+        padding-left: 90px;
+        color: #313337;
+        font-weight: bold;
+
+    }
+    dd.active > a {
+        background: transparent;
+    }
+    dd > a:hover {
+        background: transparent;
+        text-decoration: none;
+    }
+    .content.active {
+        background: none;
+        margin-left: 0;
+        border: 1px solid $accordion-navigation-bg-color;
+        border-top: none;
+        color:#313337;
+    }
+    dd{
+        min-height: 72px;
+    }
+
+  margin-bottom: 1rem;
+
+  dd:nth-child(odd) {
+      background: none;
+  }
+
+  .accordion-navigation-head {
+    display: table;
+    width: 100%;
+    .accordion-navigation-head-description,
+    .accordion-navigation-head-icon {
+      display: table-cell;
+    }
+    .accordion-navigation-head-icon {
+      vertical-align: middle;
+    }
+  }
+
+}
+
+[data-magellan-expedition] .sub-nav dd a:hover,
+[data-magellan-expedition] .sub-nav dt a:hover,
+[data-magellan-expedition] .sub-nav li a:hover {
+	background: #67A61A;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+///////////////////////////
+// SPECIAL ROWS
+//////////////////////////
+
+
+/* Navigation ROW */
+.navigationRow {
+    padding: 0 0 0 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    @extend .gradient-lightgrey-reverse;
+
+    .sticky.fixed {
+        border-bottom: none;
+        @extend .gradient-lightgrey-reverse;
+    }
+    ul{
+        li {
+            a {
+                color: $ci5;
+            }
+            a:hover,
+            &.active a {
+                text-decoration: none;
+                color: #fff !important;
+            }
+            &.has-tip {
+		        padding-right: 5px;
+		    }
+        }
+    }
+    .button {
+        margin: 5px 5px 0 0;
+    }
+}
+.top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+    background:#f4f4f4;
+    color: $ci4;
+}
+.contain-to-grid .top-bar {
+    margin-bottom: 0px;
+}
+
+
+/* Footer Row */
+//FIXME is this still in use? if not remove
+.footerRow {
+    margin-bottom: 100px;
+    h4 {
+        color: $ci6;
+        margin-bottom: 30px;
+    }
+    .contact {
+
+    }
+    .careers,
+    .news,
+    .blog {
+        b {
+            display: block;
+            color: $ci5;
+        }
+        a {
+            font-style:italic;
+            display: block;
+            color: $ci1;
+        }
+    }
+    .careers {
+        .shadowbox {
+            width:100%;
+            background:#fff;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.50);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.50);
+            h5 {
+                padding:10px;
+                background: $ci6;
+                color: #fff;
+            }
+            .entry {
+                width:100%;
+                padding: 10px 3%;
+                margin:0 0 10px 0;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+
+
+footer,
+.footer {
+    padding-top: $footer-padding-top;
+    padding-bottom: $footer-padding-bottom;
+
+    border-top: $footer-border-width solid #ddd;
+    background-color: #efefef;
+}
+
+/* maximize content height so footer is not in the middle of the screen */
+body {
+  > .wrap {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: $footer-height;
+  }
+  footer,
+  .footer {
+    margin-top: -1 * $footer-height;
+    height: $footer-height;
+    clear: both;
+  }
+}
+
+.journal {
+  .alert {
+    background-color: $alert-color;
+  }
+  .success {
+    background-color: $success-color;
+  }
+  .warning {
+    background-color: $warning-color;
+  }
+  .info {
+    background-color: $info-color;
+  }
+}
+
+.alert-box {
+    font-size: 1rem;
+
+    a {
+        font-weight: bold;
+        text-decoration: underline;
+        color: darken($primary-color, 30%);
+    }
+    &.alert a {
+        color: darken($alert-color, 30%);
+    }
+    &.success a {
+        color: darken($success-color, 30%);
+    }
+    &.warning a {
+        color: darken($warning-color, 30%);
+    }
+    &.info a {
+        color: darken($info-color, 30%);
+    }
+}
+
+/* button with lower hight */
+.button.low,
+button.low {
+  padding-top: rem-calc(7px);
+  padding-bottom: rem-calc(6px);
+}
