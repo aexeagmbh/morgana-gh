@@ -12,3 +12,7 @@ cp -r assets static
 echo "morgana.qax.io" > CNAME
 echo "$script" > update.sh
 chmod +x update.sh
+
+git add .
+git commit -a -m "update from morgana"
+git push
