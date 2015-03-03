@@ -1,0 +1,19 @@
+{
+  "name": "ax-template",
+  "private": "true",
+  "dependencies": {
+    "foundation": "~5.5.0",
+    "foundation-icon-fonts": "*",
+    "raven-js": "~1.1.16"
+  },
+  "homepage": "https://github.com/aexeagmbh/ax-template",
+  "_release": "e0a4217d2f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e0a4217d2ff146efaadfc4ba2301c4e6077fcc8e"
+  },
+  "_source": "https://github.com/aexeagmbh/ax-template.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/aexeagmbh/ax-template.git"
+}
