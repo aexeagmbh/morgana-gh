@@ -4,6 +4,7 @@ if [ ${PWD##*/} != "morgana-gh" ]; then
     echo "must run this in root of morgana-gh"
 fi
 
+git pull
 script=`cat update.sh`
 
 rm -rf *
